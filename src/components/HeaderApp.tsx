@@ -13,7 +13,7 @@ const HeaderApp = () => {
                 <a href="#home" className="rounded-full px-4 py-2 hover:bg-[var(--hover-bg-color)] transition-colors duration-300">
                     Sobre mi
                 </a>
-                <a href="#about" className="rounded-full px-4 py-2 hover:bg-[var(--hover-bg-color)] transition-colors duration-300">
+                <a href="#projects" className="rounded-full px-4 py-2 hover:bg-[var(--hover-bg-color)] transition-colors duration-300">
                     Proyectos
                 </a>
                 <a href="#contact" className="rounded-full px-4 py-2 hover:bg-[var(--hover-bg-color)] transition-colors duration-300">
