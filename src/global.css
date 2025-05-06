@@ -7,7 +7,8 @@ html{
 /* Valores por defecto */
 :root {
     --bg-color: #fff;
-    --header-bg-color: #1f2937;
+    --header-bg-color: #f1f1f1;
+    --footer-bg-color: #f2f2f2;
     --hover-bg-color: #e5e7eb;
     --text-color: #111827;
     --primary-color: #6366f1;
@@ -17,7 +18,8 @@ html{
 .dark {
     /* Background */
     --bg-color: #1e1e1e;
-    --haeder-bg-color: #1e293b;
+    --header-bg-color: #1e293b;
+    --footer-bg-color: #1e293b;
     --hover-bg-color: #374151;
     --text-color: #f9fafb;
     --primary-color: #8b5cf6;

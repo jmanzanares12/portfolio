@@ -1,5 +1,5 @@
 import HeaderApp from './components/HeaderApp'
-
+import FooterApp from './components/FooterApp'
 
 
 const App = () => {
@@ -18,6 +18,8 @@ const App = () => {
       <section id='contact' className='h-screen flex items-center justify-center'>
         <h2 className='text-2xl font-semibold'>Contacto</h2>
       </section>
+
+      <FooterApp />
     </main>
   )
 }
