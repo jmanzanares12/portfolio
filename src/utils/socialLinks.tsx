@@ -1,4 +1,4 @@
-import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 export const SocialLinks = [
     {
@@ -13,10 +13,4 @@ export const SocialLinks = [
         name: 'Github',
         className: 'border-gray-600 text-gray-400 hover:bg-gray-600/10 hover:text-gray-500 rounded-full'
     },
-    {
-        icon: <FaEnvelope size={20} />,
-        link: 'mailto:manzanares.jorge.jm@gmail.com',
-        name: 'Email',
-        className: 'border-red-500 text-red-300 hover:bg-red-500/10 hover:text-red-500 rounded-full'
-    }
 ]

@@ -11,6 +11,7 @@ html{
     --footer-bg-color: #f2f2f2;
     --hover-bg-color: #e5e7eb;
     --text-color: #111827;
+    --muted-text-color: #6b7280;
     --primary-color: #588bd3;
 }
 
@@ -22,5 +23,6 @@ html{
     --footer-bg-color: #1e293b;
     --hover-bg-color: #374151;
     --text-color: #f9fafb;
+    --mutted-text-color: #e2e8f0;
     --primary-color: #4364f6;
 }
