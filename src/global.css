@@ -8,6 +8,7 @@ html{
 :root {
     --bg-color: #fff;
     --header-bg-color: #f1f1f1;
+    --card-bg-color: #f2f2f2;
     --footer-bg-color: #f2f2f2;
     --hover-bg-color: #e5e7eb;
     --text-color: #111827;
@@ -20,6 +21,7 @@ html{
     /* Background */
     --bg-color: #1e1e1e;
     --header-bg-color: #1e293b;
+    --card-bg-color: #1e293b;
     --footer-bg-color: #1e293b;
     --hover-bg-color: #374151;
     --text-color: #f9fafb;

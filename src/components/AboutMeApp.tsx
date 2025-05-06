@@ -10,17 +10,26 @@ const AboutMeApp = () => {
 
             <div className="max-w-3xl space-y-6 text-base sm:text-lg text=justify">
                 <p className="text-lg">
-                    Soy un amante del desarrollo de aplicaciones web. Me gusta aprender y crear soluciones que me ayuden a mejorar mis habilidades.
-                    He trabajado con Odoo, desarrollando módulos que mejoran la experiencia de usuario, enfocándome en eficiencia y seguridad.
+                Apasionado por el desarrollo de aplicaciones web, me dedico a crear soluciones innovadoras que potencien la experiencia 
+                de usuario y optimicen procesos. Con experiencia en el desarrollo de módulos personalizados para Odoo, priorizo la 
+                eficiencia, la seguridad y un código mantenible.
                 </p>
                 <p className="text-lg">
-                    Actualmente estudio y practico tecnologías como React, Next.js, Tailwind CSS, TypeScript, Node.js, PostgreSQL y Git.
-                    Me motiva trabajar en equipo y afrontar nuevos retos constantemente.
+                    Actualmente, me especializo en tecnologías modernas como:
                 </p>
+                <ul className="list-disc list-inside">
+                        <li>React, Next.js, TypeScript para interfaces dinamicas y escalables.</li>
+                        <li>Tailwind CSS para estilos responsivos y limpios.</li>
+                        <li>Node.js y PostgreSQL para el desarrollo de backend robusto.</li>
+                        <li>Git y GitHub para el control de versiones y colaboración.</li>
+                    </ul>
                 <p className="text-lg">
-                    Mi objetivo es crecer profesionalmente y trabajar en proyectos que aporten valor, tanto personal como profesionalmente.
-                    Si piensas que puedo ayudarte, no dudes en contactarme.
+                Disfruto trabajar en equipo, enfrentar nuevos desafíos y aprender constantemente. Mi objetivo es crecer profesionalmente, 
+                contribuyendo a proyectos que generen impacto real y me permitan seguir evolucionando.
                 </p>
+                <span className='text-lg font-semibold'>
+                ¿Crees que puedo aportar valor a tu equipo o proyecto? ¡Hablemos!
+                </span>
             </div>
 
             <div className='flex flex-col gap-4 md:gap-0 md:flex-row'>
@@ -30,8 +39,6 @@ const AboutMeApp = () => {
                     className='mt-4'
                 />
             </div>
-
-
         </section>
     );
 };
