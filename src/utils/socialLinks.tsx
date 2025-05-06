@@ -1,16 +1,22 @@
-import { LiaLinkedin, LiaGithub } from "react-icons/lia";
+import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
 
-export const socialLinks = [
+export const SocialLinks = [
     {
-        icon: <LiaLinkedin size={20} />,
+        icon: <FaLinkedinIn size={20} />,
         link: 'https://www.linkedin.com/in/jorge-manzanares-30b63223a/',
         name: 'Linkedin',
-        className: 'border-sky-500 text-sky-500 hover:bg-sky-500/10 hover:text-sky-500 rounded-full',
+        className: 'border border-cyan-600 text-cyan-400 hover:bg-cyan-600/10 hover:text-cyan-600 rounded-full'
     },
     {
-        icon: <LiaGithub size={20} />,
+        icon: <FaGithub size={20} />,
         link: 'https://github.com/jmanzanares12',
         name: 'Github',
-        className: 'border-gray-500 text-gray-500 hover:bg-gray-500/10 hover:text-gray-500 rounded-full',
+        className: 'border-gray-600 text-gray-400 hover:bg-gray-600/10 hover:text-gray-500 rounded-full'
+    },
+    {
+        icon: <FaEnvelope size={20} />,
+        link: 'mailto:manzanares.jorge.jm@gmail.com',
+        name: 'Email',
+        className: 'border-red-500 text-red-300 hover:bg-red-500/10 hover:text-red-500 rounded-full'
     }
 ]

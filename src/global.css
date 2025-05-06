@@ -11,7 +11,7 @@ html{
     --footer-bg-color: #f2f2f2;
     --hover-bg-color: #e5e7eb;
     --text-color: #111827;
-    --primary-color: #6366f1;
+    --primary-color: #588bd3;
 }
 
 /* Tema oscuro */
@@ -22,5 +22,5 @@ html{
     --footer-bg-color: #1e293b;
     --hover-bg-color: #374151;
     --text-color: #f9fafb;
-    --primary-color: #8b5cf6;
+    --primary-color: #4364f6;
 }
