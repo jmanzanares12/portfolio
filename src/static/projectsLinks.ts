@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export const projectsLinks = [
     {
@@ -11,7 +12,7 @@ export const projectsLinks = [
         name: 'Horoscope',
         link: 'https://jmanzanares12.github.io/horoscope-app/',
         description: 'Proyecto de laboratorio para el curso de desarrollo web con React y Tailwind CSS.',
-        Image: '/src/assets/Horoscope.png',
+        Image: '/src/assets/HoroscopeApp.png',
         tags: ['React', 'Tailwind CSS']
     },
     {
@@ -34,5 +35,12 @@ export const projectsLinks = [
         description: 'Pagina web para la empresa RiveraBI, creada con Odoo.',
         image: '/src/assets/RiveraBI.png',
         tags: ['Odoo']
+    },
+    {
+        name: 'Flowers',
+        link: 'https://jmanzanares12.github.io/yellow-flowers/',
+        description: 'Practica de react para la creacion de una animacion de flores amarillas utilizando canvas.',
+        image: '/src/assets/Flowers.png',
+        tags: ['React', 'Canvas', 'Tailwind CSS']
     }
 ]  

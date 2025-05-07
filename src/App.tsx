@@ -2,6 +2,7 @@ import HeaderApp from './components/HeaderApp'
 import FooterApp from './components/FooterApp'
 import AboutMe from './views/AboutMe'
 import Projects from './views/Projects'
+import Contact from './views/Contact'
 
 const App = () => {
   return (
@@ -16,8 +17,8 @@ const App = () => {
         <Projects />
       </section>
 
-      <section id='contact' >
-        
+      <section id='contact' className='scroll-mt-20'>
+        <Contact />
       </section>
 
       <FooterApp />
