@@ -1,5 +1,4 @@
 import React from "react";
-
 interface SocialButtonProps {
     icon: React.ReactNode;
     link: string;
