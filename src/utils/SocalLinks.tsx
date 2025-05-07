@@ -1,6 +1,14 @@
+import { JSX } from "react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
-export const socialLinks = [
+export type SocialLink = {
+    icon: JSX.Element;
+    link: string;
+    name: string;
+    className?: string;
+}
+
+export const SocialLinks: SocialLink[] = [
     {
         icon: <FaLinkedinIn size={20} />,
         link: 'https://www.linkedin.com/in/jorge-manzanares-30b63223a/',

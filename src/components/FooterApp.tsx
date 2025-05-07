@@ -1,5 +1,5 @@
 import SocialButton from "../shared/SocialButton";
-import { socialLinks } from "../utils/socialLinks";
+import { SocialLinks } from '../utils/SocalLinks';
 
 const FooterApp = () => {
     return (
@@ -7,7 +7,7 @@ const FooterApp = () => {
             <h2 className="text-base sm:text-lg font-semibold">Jorge Manzanares</h2>
             <p className="text-xs sm:text-sm text-[var(--muted-text-color)]">Desarrollador web front-end</p>
             <div className="flex flex-wrap justify-center gap-4">
-                {socialLinks.map(({icon, link, name, className}) => (
+                {SocialLinks.map(({icon, link, name, className}) => (
                     <SocialButton 
                         key={name}
                         icon={icon} 
