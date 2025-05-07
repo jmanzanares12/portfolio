@@ -1,7 +1,8 @@
 import emailjs from '@emailjs/browser';
 import { useState, useRef } from 'react';
 import SocialButton from '../shared/SocialButton';
-import { SocialLinks } from '../utils/SocalLinks';
+import { getIconByName } from '../shared/IconMapper';
+import { socialLinks } from '../utils/socalLinks';
 
 const ContactApp = () => {
     const form = useRef<HTMLFormElement>(null);
@@ -88,8 +89,14 @@ const ContactApp = () => {
             </form>
 
             <div className='mt-16 flex justify-center gap-6'>
-                {SocialLinks.map(({ icon, link, name, className }, index) => (
-                    <SocialButton key={index} icon={icon} link={link} name={name} className={className} />
+                {socialLinks.map(({iconName, link, name, className}) => (
+                    <SocialButton
+                        key={name}
+                        icon={getIconByName(iconName)}
+                        link={link}
+                        name={name}
+                        className={className}
+                    />
                 ))}
             </div>
         </section>
