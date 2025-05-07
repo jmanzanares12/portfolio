@@ -34,7 +34,7 @@ const AboutMeApp = () => {
 
             <div className='flex flex-col gap-4 md:gap-0 md:flex-row'>
                 <DownloadButton
-                    href="/cv/Jorge_Manzanares_CV.pdf"
+                    href="/Jorge_Manzanares_CV.pdf"
                     fileName="Jorge_Manzanares_CV.pdf"
                     className='mt-4'
                 />
