@@ -11,7 +11,7 @@ export const socialLinks: socialLink[] = [
         iconName: 'linkedin',
         link: 'https://www.linkedin.com/in/jorge-manzanares-30b63223a/',
         name: 'Linkedin',
-        className: 'border border-cyan-600 text-cyan-400 hover:bg-cyan-600/10 hover:text-cyan-600 rounded-full'
+        className: 'border border-cyan-700 text-cyan-400 hover:bg-cyan-600/10 hover:text-cyan-600 rounded-full'
     },
     {
         iconName: 'github',
