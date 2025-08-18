@@ -15,8 +15,8 @@ const AboutMeApp = () => {
                 <p className='text-sm sm:text-lg text-[var(--muted-text-color)] mb-6 sm:mb-8 max-w-xl sm:max-w-2xl mx-auto'>
                     Creo soluciones modernas y escalables que se adapten a las necesidades de los usuarios, 
                     utilizando un stack de tecnologias modernas y de vanguardia: <strong>React.js</strong>, <strong>Next.js</strong>, <strong>TailwinCSS</strong>, <strong>PostgreSQL</strong> y <strong>Prisma</strong>. 
-                    Ademas, cuento con experiencia en integracion e implementacion de sistemas ERP <strong>Odoo</strong>. Continuamente busco aprender y mejorar mis habilidades 
-                    con el fin de entregar mejores propuestas y solcuiones.
+                    Ademas, cuento con experiencia en integracion e implementacion de sistemas ERP con <strong>Odoo</strong>. Continuamente busco aprender y mejorar mis habilidades 
+                    con el fin de entregar mejores propuestas y soluciones a los ususarios.
                 </p>
                 <div className='flex flex-col sm:flex-row justify-center gap-3 sm:gap-4'>
                     <a 

@@ -31,7 +31,7 @@ export const projectsLinks = [
     {
         name: 'Pasteleria Lilliam',
         link: 'https://pasteleria-l.vercel.app/',
-        description: 'Proyecto personal para la creación de una pagina dedicada a la pastelería Lilliam.',
+        description: 'Proyecto personal para la creación de una pagina web dedicada a la pastelería Lilliam.',
         image: PasteleriaImg,
         tags: ['React', 'Tailwind CSS']
     },
