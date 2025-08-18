@@ -1,17 +1,16 @@
 import { FaDownload } from "react-icons/fa";
 
 interface DownloadButtonProps {
-    className?: string;
     href?: string;
     fileName?: string;
 }
 
-const DownloadButton = ({ className='', href, fileName }: DownloadButtonProps) => {
+const DownloadButton = ({href, fileName }: DownloadButtonProps) => {
     return(
         <a
             href={href}
             download={fileName}
-            className={`inline-flex items-center gap-2 bg-[var(--primary-color)] text-white font-semibold px-4 py-2 rounded-lg hover:opacity-all transition-all ${className}`}
+            className={`flex justify-center items-center px-6 py-3 gap-2 text-sm text-[var(--text-muted-color)] border border-[var(--border-color)] rounded-lg hover:border-[var(--border-color)]/150 `}
             aria-label='Download'
         >
             <FaDownload />

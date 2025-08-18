@@ -10,14 +10,14 @@ export const projectsLinks = [
     {
         name: 'Pokedex',
         link: 'https://pokedex-jade-psi.vercel.app/',
-        description: 'Proyecto de laboratorio para el curso de desarrollo web con React y PokeAPI.',
+        description: 'Poyecto final de curso de introduccion al desarrollo web con React.',
         image: PokedexImg,
         tags: ['React', 'PokeAPI', 'Tailwind CSS', 'Vercel']
     },
     {
         name: 'Horoscope',
         link: 'https://jmanzanares12.github.io/horoscope-app/',
-        description: 'Proyecto de laboratorio para el curso de desarrollo web con React y Tailwind CSS.',
+        description: 'Proyecto de laboratorio para el curso de desarrollo web con React.',
         Image: HoroscopeImg,
         tags: ['React', 'Tailwind CSS']
     },
@@ -38,14 +38,14 @@ export const projectsLinks = [
     {
         name: 'RiveraBI',
         link: 'https://riverabi.com/',
-        description: 'Pagina web para la empresa RiveraBI, creada con Odoo.',
+        description: 'Implementacion y desarrollo de pagina web para la empresa RiveraBI utilizando el ERP Odoo.',
         image: RiveraBIImg,
         tags: ['Odoo']
     },
     {
         name: 'Flowers',
         link: 'https://jmanzanares12.github.io/yellow-flowers/',
-        description: 'Practica de react para la creacion de una animacion de flores amarillas utilizando canvas.',
+        description: 'Practica en react para la creacion de una animacion de flores amarillas utilizando canvas.',
         image: FlowersImg,
         tags: ['React', 'Canvas', 'Tailwind CSS']
     }

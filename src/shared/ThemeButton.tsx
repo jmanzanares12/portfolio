@@ -7,7 +7,7 @@ const ThemeButton = () => {
     return (
         <button 
             onClick={changeTheme}
-            className='ml-4 p-2 rounde-full transition-colors duration-300'
+            className='ml-2 p-2 rounde-full transition-colors duration-300'
             aria-label='Toggle theme'
         >
             {theme === 'dark' ? <FaSun /> : <FaMoon />}

@@ -7,24 +7,26 @@ html{
 /* Valores por defecto */
 :root {
     --bg-color: #fff;
-    --header-bg-color: #f1f1f1;
-    --card-bg-color: #f2f2f2;
-    --footer-bg-color: #f2f2f2;
-    --hover-bg-color: #e5e7eb;
-    --text-color: #111827;
-    --muted-text-color: #6b7280;
-    --primary-color: #588bd3;
+    --bg-header-color: #f1f1f1;
+    --bg-footer-color: #f1f1f1;
+    --bg-card-color: #fcfcfc;
+    --bg-hover-color: #dfdcdc;
+    --border-color: #c2c2c2;
+    --text-color: #1e1e1e;
+    --text-muted-color: #6b7280;
+    --color-info: #3b82f6;
 }
 
 /* Tema oscuro */
 .dark {
     /* Background */
     --bg-color: #1e1e1e;
-    --header-bg-color: #1e293b;
-    --card-bg-color: #1e293b;
-    --footer-bg-color: #1e293b;
-    --hover-bg-color: #374151;
-    --text-color: #f9fafb;
-    --mutted-text-color: #e2e8f0;
-    --primary-color: #4364f6;
+    --bg-header-color: #1e293b;
+    --bg-footer-color: #1e293b;
+    --bg-card-color: #262626;
+    --bg-hover-color: #24324a;
+    --border-color: #2e2e2e;
+    --text-color: #e5e5e5;
+    --text-muted-color: #9ca3af;
+    --color-info: #3b82f6;
 }

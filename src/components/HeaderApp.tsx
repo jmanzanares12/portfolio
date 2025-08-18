@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { AiOutlineGithub, AiOutlineWhatsApp } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
+import { RiMenuFold4Line } from "react-icons/ri";
+import { FiX } from "react-icons/fi";
 import ThemeButton from "../shared/ThemeButton";
 
 const HeaderApp = () => {
@@ -8,47 +11,47 @@ const HeaderApp = () => {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <header className='flex items-center justify-between py-4 px-6 md:px-8 bg-[var(--header-bg-color)] text-[var(--text-color)] shadow-md sticky top-0 z-50'>
-            <div>
-                <h1 className="text-2xl font-semibold">
-                    <span>Jorge Manzanares</span>
-                </h1>
+        <header className="sticky top-0 z-50 bg-[var(--bg-header-color)] text-[var(--text-color)] shadow-md">
+            <div className="max-w-6xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-4">
+
+                <div>
+                    <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-color)]">Jorge Gaitán</h1>
+                    <p className="text-xs sm:text-sm text-[var(--text-muted-color)] font-medium">Desarrollador Web Jr</p>
+                </div>
+
+                <nav className="hidden md:flex gap-4 items-center">
+                    <a href="https://github.com/jmanzanares12" target="_blank" rel="noreferrer" className="rounded-full px-2 py-2 hover:bg-black/50 transition-colors duration-300">
+                        <AiOutlineGithub size={20} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/jorge-manzanares-30b63223a/" target="_blank" rel="noreferrer" className="rounded-full px-2 py-2 hover:bg-cyan-500/50 transition-colors duration-300">
+                        <FaLinkedin size={20} />
+                    </a>
+                    <a href={`https://wa.me/50576208329?text=${encodeURIComponent('Hola Jorge!')}`} target="_blank" rel="noreferrer" className="rounded-full px-2 py-2 hover:bg-green-500/50 transition-colors duration-300">
+                        <AiOutlineWhatsApp size={20} />
+                    </a>
+
+                    <ThemeButton />
+                </nav>
+
+                <button className="md:hidden" onClick={toggleMenu}>
+                    {isOpen ? <FiX size={24} /> : <RiMenuFold4Line size={24} />}
+                </button>
             </div>
 
-            <button onClick={toggleMenu} className="md:hidden text-xl">
-                {isOpen ? <FaTimes /> : <FaBars />}
-            </button>
-
-            <nav className='hidden md:flex items-center gap-4 text-sm'>
-                <a href='#home' className="rounded-full px-4 py-2 hover:bg-[var(--hover-bg-color)] transition-colors duration-300">
-                    Sobre mi
-                </a>
-                <a href='#projects' className="rounded-full px-4 py-2 hover:bg-[var(--hover-bg-color)] transition-colors duration-300">
-                    Proyectos
-                </a>
-                <a href='#contact' className="rounded-full px-4 py-2 hover:bg-[var(--hover-bg-color)] transition-colors duration-300">
-                    Contacto
-                </a>
-                <ThemeButton />
-            </nav>
-
-            {
-                isOpen && (
-                    <div className="absolute top-[100%] left-0 w-full bg-[var(--header-bg-color)] flex flex-col gap-4 py-4 md:hidden z-40">
-                        <a href="#home" onClick={toggleMenu} className="rounded-full px-4 py-2 hover:bg-[var(--hover-bg-color)] transition-colors duration-300">
-                            Sobre mi
-                        </a>
-                        <a href="#projects" onClick={toggleMenu} className="rounded-full px-4 py-2 hover:bg-[var(--hover-bg-color)] transition-colors duration-300">
-                            Proyectos
-                        </a>
-                        <a href="#contact" onClick={toggleMenu} className="rounded-full px-4 py-2 hover:bg-[var(--hover-bg-color)] transition-colors duration-300">
-                            Contacto
-                        </a>
-                        <ThemeButton />
-                    </div>
-                )
-            }
-
+            {isOpen && (
+                <div className="md:hidden bg-[var(--bg-header-color)] text-[var(--text-color)] border-t border-[var(--border-color)] py-4 px-4 flex flex-col gap-4">
+                    <a href="https://github.com/jmanzanares12" target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 hover:bg-[var(--bg-hover-color)] transition-colors duration-300">
+                        <AiOutlineGithub size={20} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/jorge-manzanares-30b63223a/" target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 hover:bg-[var(--bg-hover-color)] transition-colors duration-300">
+                        <FaLinkedin size={20} />
+                    </a>
+                    <a href={`https://wa.me/50576208329?text=${encodeURIComponent('Hola Jorge!')}`} target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 hover:bg-[var(--bg-hover-color)] transition-colors duration-300">
+                        <AiOutlineWhatsApp size={20} />
+                    </a>
+                    <ThemeButton />
+                </div>
+            )}
         </header>
     );
 };

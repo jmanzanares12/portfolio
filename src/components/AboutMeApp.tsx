@@ -3,41 +3,40 @@ import DownloadButton from '../shared/DownloadButtton';
 
 const AboutMeApp = () => {
     return (
-        <section id="about-me" className="min-h-screen flex flex-col md:flex-col items-center justify-center px-6 sm:px-10 py-16 gap-10 text-[var(--text-color)]">
-            <div className='w-50 h-50 sm:w-48 sm:h-48 md:w-60 md:h-60 overflow-hidden shadow-md rounded-full border border-[var(--primary-color)]'>
-                <img src={photo} alt="Foto de Jorge Manzanares" className="w-full h-full object-cover" />
-            </div>
-
-            <div className="max-w-3xl space-y-6 text-base sm:text-lg text=justify">
-                <p className="text-lg">
-                Apasionado por el desarrollo de aplicaciones web, me dedico a crear soluciones innovadoras que potencien la experiencia 
-                de usuario y optimicen procesos. Con experiencia en el desarrollo de módulos personalizados para Odoo, priorizo la 
-                eficiencia, la seguridad y un código mantenible.
-                </p>
-                <p className="text-lg">
-                    Actualmente, me especializo en tecnologías modernas como:
-                </p>
-                <ul className="list-disc list-inside">
-                        <li>React, Next.js, TypeScript para interfaces dinamicas y escalables.</li>
-                        <li>Tailwind CSS para estilos responsivos y limpios.</li>
-                        <li>Node.js y PostgreSQL para el desarrollo de backend robusto.</li>
-                        <li>Git y GitHub para el control de versiones y colaboración.</li>
-                    </ul>
-                <p className="text-lg">
-                Disfruto trabajar en equipo, enfrentar nuevos desafíos y aprender constantemente. Mi objetivo es crecer profesionalmente, 
-                contribuyendo a proyectos que generen impacto real y me permitan seguir evolucionando.
-                </p>
-                <span className='text-lg font-semibold'>
-                ¿Crees que puedo aportar valor a tu equipo o proyecto? ¡Hablemos!
-                </span>
-            </div>
-
-            <div className='flex flex-col gap-4 md:gap-0 md:flex-row'>
-                <DownloadButton
-                    href="/Jorge_Manzanares_CV.pdf"
-                    fileName="Jorge_Manzanares_CV.pdf"
-                    className='mt-4'
+        <section className='bg-[var(--bg-color)] text-[var(--text-color)] py-16'>
+            <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+                <img 
+                    src={photo}
+                    alt="Jorge Gaitán"
+                    className='w-32 sm:w-48 h-32 sm:h-48 mx-auto rounded-full border border-[var(--primary-color)] shadow-lg mb-4 sm:mb-6'
                 />
+                <h1 className='text-2xl sm:text-4xl font-bold text-[var(--text-color)] mb-2 sm:mb-4'>Jorge Gaitán</h1>
+                <p className='text-base sm:text-lg text-[var(--muted-text-color)] font-medium mb-4 sm:mb-6'>Desarrollador Web Jr</p>
+                <p className='text-sm sm:text-lg text-[var(--muted-text-color)] mb-6 sm:mb-8 max-w-xl sm:max-w-2xl mx-auto'>
+                    Creo soluciones modernas y escalables que se adapten a las necesidades de los usuarios, 
+                    utilizando un stack de tecnologias modernas y de vanguardia: <strong>React.js</strong>, <strong>Next.js</strong>, <strong>TailwinCSS</strong>, <strong>PostgreSQL</strong> y <strong>Prisma</strong>. 
+                    Ademas, cuento con experiencia en integracion e implementacion de sistemas ERP <strong>Odoo</strong>. Continuamente busco aprender y mejorar mis habilidades 
+                    con el fin de entregar mejores propuestas y solcuiones.
+                </p>
+                <div className='flex flex-col sm:flex-row justify-center gap-3 sm:gap-4'>
+                    <a 
+                        href="#projects"
+                        className='px-6 py-3 bg-[var(--color-info)] text-white rounded-lg shadow-md hover:bg-[var(--color-info)]/80 transition-all duration-300'
+                    >
+                        Ver proyectos
+                    </a>
+                    <a 
+                        href="#contact"
+                        className='px-6 py-3 border border-[var(--color-info)] text-[var(--color-info)] rounded-lg shadow-md hover:bg-[var(--color-info)]/10 transition-all duration-300'
+                    >
+                        Contactar
+                    </a>
+
+                    <DownloadButton 
+                        href='/public/Resume.pdf'
+                        fileName='Resume.pdf'
+                    />
+                </div>
             </div>
         </section>
     );

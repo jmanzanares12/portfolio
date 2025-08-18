@@ -5,39 +5,41 @@ interface ProjectCardProps {
     link?: string;
     description?: string;
     image?: string;
-    tags?: string[]
+    tags?: string[];
+    reverse?: boolean;
 }
 
-const ProjectCard = ({name, link, description, image, tags}: ProjectCardProps) => {
-    return(
-        <div className='bg-[var(--card-bg-color)] text-[var(--text-color)] rounded-2xl shadow-md p-4 flex flex-col gap-4 w-full sm:max-w-md transition-transform hover:scale-[1.02]'>
-            <img src={image} alt={name} className="rounded-lg object-cover h-48 w-full" />
-            <div className='flex justify-between items-center'>
-                <h3 className='text-xl font-semibold'>
-                    {name}
-                </h3>
-                <a 
-                    href={link} 
-                    target='_blank'
-                    rel='noreferrer'
-                    className='text-[var(--primary-color)] hover:underline text-sm flex items-center gap-2'
-                >
-                    <FaExternalLinkAlt className="text-xs"/>
-                    Ver proyecto
-                </a>
+const ProjectCard = ({ name, link, description, image, tags, reverse }: ProjectCardProps) => {
+    return (
+        <div
+            className={`flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""}
+                items-center bg-[var(--bg-card-color)] border border-[var(--border-color)] 
+                rounded-xl shadow-md overflow-hidden p-4 gap-4`}
+        >
+            <div className="w-full md:w-1/2 h-64 md:h-80">
+                <img src={image} alt={name} className="w-full h-full object-cover rounded-xl" />
             </div>
-            
-            <p className='text-sm text-[var(--muted-text-color)]'>
-                    {description}
-            </p>
 
-            <div className="flex flex-wrap gap-2">
-                {tags?.map((tag, index) => (
-                    <span key={index} className='text-xs bg-[var(--primary-color)] text-white px-2 py-1 rounded-full'>
-                        {tag}
-                    </span>
-                ))}
+            <div className="w-full md:w-1/2 p-6 flex flex-col justify-between gap-4">
+                <div>
+                    <h3 className="text-2xl font-semibold">{name}</h3>
+                    {link && (
+                        <a href={link} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-[var(--text-muted-color)] hover:underline transition-all duration-300">
+                            <FaExternalLinkAlt className="w-4 h-4" />
+                            Ver proyecto
+                        </a>
+                    )}
+                </div>
 
+                <p className="text-[var(--text-muted-color)] leading-relaxed">{description}</p>
+
+                {tags && (
+                    <div className="flex flex-warp gap-2 mt-2">
+                        {tags.map((tag, index) => (
+                            <span key={index} className="bg-[var(--color-info)] text-xs text-white px-2 py-1 rounded-full">{tag}</span>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     )
