@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { contactSchema } from '../validations/contact.schema';
 import { ContactFormInputs } from '../types/contact.types';
+import { FORMSPREE_API } from '../../../api/mail.api';
 
 const ContactForm = () => {
     const {
@@ -13,10 +14,25 @@ const ContactForm = () => {
         })
 
     const onSubmit = async (data: ContactFormInputs) => {
-        console.log("Datos enviados: ", data);
+        try {
+            const response = await fetch(FORMSPREE_API, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json'
+                },
+                body: JSON.stringify(data),
+            });
 
-        await new Promise((resolve) => setTimeout(resolve, 1500))
-        reset();
+            if (response.ok) {
+                console.log('Datos enviados correctamente');
+                reset();
+            } else {
+                console.error('Error al enviar el mail', await response.json());
+            }
+        } catch (error) {
+            console.log('Error al enviar el mail');
+        }
     }
 
     return (
@@ -25,7 +41,7 @@ const ContactForm = () => {
             className='max-w-xl w-full mx-auto bg-[var(--bg-card-color)] border border-[var(--border-color)] p-6 space-y-6 mt-10 sm:mt-12 rounded-2xl'
         >
             <div>
-                <label htmlFor="username" className='block text-sm font-medium text-[var(--muted-text-color)] mb-2'>Nombre *</label>
+                <label className='block text-sm font-medium text-[var(--muted-text-color)] mb-2'>Nombre *</label>
                 <input
                     {...register('username')}
                     placeholder='Nombre completo'
@@ -37,7 +53,7 @@ const ContactForm = () => {
             </div>
 
             <div>
-                <label htmlFor="email" className='block text-sm font-medium text-[var(--muted-text-color)] mb-2'>Correo electrónico *</label>
+                <label className='block text-sm font-medium text-[var(--muted-text-color)] mb-2'>Correo electrónico *</label>
                 <input
                     type='email'
                     {...register('email')}
@@ -49,7 +65,7 @@ const ContactForm = () => {
                 )}
             </div>
             <div>
-                <label htmlFor="message" className='block text-sm font-medium text-[var(--muted-text-color)] mb-2'>Mensaje *</label>
+                <label className='block text-sm font-medium text-[var(--muted-text-color)] mb-2'>Mensaje *</label>
                 <textarea
                     {...register('message')}
                     placeholder='Escribe tu mensaje...'

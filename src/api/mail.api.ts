@@ -1,0 +1,1 @@
+export const FORMSPREE_API = 'https://formspree.io/f/xkgzavlb';
