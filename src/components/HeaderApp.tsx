@@ -40,13 +40,13 @@ const HeaderApp = () => {
 
             {isOpen && (
                 <div className="md:hidden bg-[var(--bg-header-color)] text-[var(--text-color)] border-t border-[var(--border-color)] py-4 px-4 flex flex-col gap-4">
-                    <a href="https://github.com/jmanzanares12" target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 hover:bg-[var(--bg-hover-color)] transition-colors duration-300">
+                    <a href="https://github.com/jmanzanares12" target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 hover:bg-black/50 transition-colors duration-300">
                         <AiOutlineGithub size={20} />
                     </a>
-                    <a href="https://www.linkedin.com/in/jorge-manzanares-30b63223a/" target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 hover:bg-[var(--bg-hover-color)] transition-colors duration-300">
+                    <a href="https://www.linkedin.com/in/jorge-manzanares-30b63223a/" target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 hover:bg-cyan-500/50 transition-colors duration-300">
                         <FaLinkedin size={20} />
                     </a>
-                    <a href={`https://wa.me/50576208329?text=${encodeURIComponent('Hola Jorge!')}`} target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 hover:bg-[var(--bg-hover-color)] transition-colors duration-300">
+                    <a href={`https://wa.me/50576208329?text=${encodeURIComponent('Hola Jorge!')}`} target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 hover:bg-green-500/50 transition-colors duration-300">
                         <AiOutlineWhatsApp size={20} />
                     </a>
                     <ThemeButton />

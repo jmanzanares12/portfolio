@@ -33,7 +33,7 @@ const AboutMeApp = () => {
                     </a>
 
                     <DownloadButton 
-                        href='/public/Resume.pdf'
+                        href='/Resume.pdf'
                         fileName='Resume.pdf'
                     />
                 </div>
