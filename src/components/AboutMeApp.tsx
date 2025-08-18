@@ -1,4 +1,4 @@
-import photo from '../assets/photo.png';
+import photo from '../assets/photo.avif';
 import DownloadButton from '../shared/DownloadButtton';
 
 const AboutMeApp = () => {

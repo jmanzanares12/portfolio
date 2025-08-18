@@ -1,9 +1,9 @@
-import PokedexImg from '../assets/Pokedex.png';
-import HoroscopeImg from '../assets/HoroscopeApp.png';
-import RockPaperScissorImg from '../assets/RockPaperScissor.png';
-import PasteleriaImg from '../assets/PastrieShop.png';
-import RiveraBIImg from '../assets/RiveraBI.png';
-import FlowersImg from '../assets/Flowers.png';
+import PokedexImg from '../assets/Pokedex.avif';
+import HoroscopeImg from '../assets/HoroscopeApp.avif';
+import RockPaperScissorImg from '../assets/RockPaperScissor.avif';
+import PasteleriaImg from '../assets/PastrieShop.avif';
+import RiveraBIImg from '../assets/RiveraBI.avif';
+import FlowersImg from '../assets/Flowers.avif';
 
 
 export const projectsLinks = [
@@ -18,7 +18,7 @@ export const projectsLinks = [
         name: 'Horoscope',
         link: 'https://jmanzanares12.github.io/horoscope-app/',
         description: 'Proyecto de laboratorio para el curso de desarrollo web con React.',
-        Image: HoroscopeImg,
+        image: HoroscopeImg,
         tags: ['React', 'Tailwind CSS']
     },
     {

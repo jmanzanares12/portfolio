@@ -17,7 +17,7 @@ const ProjectCard = ({ name, link, description, image, tags, reverse }: ProjectC
                 rounded-xl shadow-md overflow-hidden p-4 gap-4`}
         >
             <div className="w-full md:w-1/2 h-64 md:h-80">
-                <img src={image} alt={name} className="w-full h-full object-cover rounded-xl" />
+                <img src={image} alt={name} loading="lazy" decoding="async"className="w-full h-full object-cover rounded-xl" />
             </div>
 
             <div className="w-full md:w-1/2 p-6 flex flex-col justify-between gap-4">
@@ -36,7 +36,7 @@ const ProjectCard = ({ name, link, description, image, tags, reverse }: ProjectC
                 {tags && (
                     <div className="flex flex-warp gap-2 mt-2">
                         {tags.map((tag, index) => (
-                            <span key={index} className="bg-[var(--color-info)] text-xs text-white px-2 py-1 rounded-full">{tag}</span>
+                            <span key={index} className="bg-[var(--color-info)] text-xs text-white px-2 py-2 rounded-full">{tag}</span>
                         ))}
                     </div>
                 )}
