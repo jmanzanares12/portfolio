@@ -3,36 +3,47 @@ import DownloadButton from '../shared/DownloadButtton';
 
 const AboutMeApp = () => {
     return (
-        <section className='bg-[var(--bg-color)] text-[var(--text-color)] py-16'>
+        <section className='max-w-7xl bg-gradient-to-b from-[var(--bg-color)] to-[var(--bg-soft-color)] py-16 sm:py-24 border border-[var(--border-color)] rounded-lg shadow-md mx-4 sm:mx-6 lg:mx-auto my-8'>
             <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-                <img 
+                <img
                     src={photo}
                     alt="Jorge Gaitán"
-                    className='w-32 sm:w-48 h-32 sm:h-48 mx-auto rounded-full border border-[var(--primary-color)] shadow-lg mb-4 sm:mb-6'
+                    className='w-32 sm:w-48 h-32 sm:h-48 mx-auto rounded-full
+                    border-2 border-[var(--primary-color)] ring-4 ring-[var(--primary-color)]/20 
+                    shadow-xl mb-6 transition-transform duration-300 hover:scale-105'
                 />
-                <h1 className='text-2xl sm:text-4xl font-bold text-[var(--text-color)] mb-2 sm:mb-4'>Jorge Gaitán</h1>
-                <p className='text-base sm:text-lg text-[var(--muted-text-color)] font-medium mb-4 sm:mb-6'>Desarrollador Web Jr</p>
-                <p className='text-sm sm:text-lg text-[var(--muted-text-color)] mb-6 sm:mb-8 max-w-xl sm:max-w-2xl mx-auto'>
-                    Creo soluciones modernas y escalables que se adapten a las necesidades de los usuarios, 
-                    utilizando un stack de tecnologias modernas y de vanguardia: <strong>React.js</strong>, <strong>Next.js</strong>, <strong>TailwinCSS</strong>, <strong>PostgreSQL</strong> y <strong>Prisma</strong>. 
-                    Ademas, cuento con experiencia en integracion e implementacion de sistemas ERP con <strong>Odoo</strong>. Continuamente busco aprender y mejorar mis habilidades 
-                    con el fin de entregar mejores propuestas y soluciones a los ususarios.
+                <h1 className='text-3xl sm:text-4xl font-bold mb-2'>
+                    <span className='text-[var(--primary-color)]'>Jorge</span> Gaitán
+                </h1>
+                <p className='text-base sm:text-lg text-[var(--text-muted-color)] mb-6'>
+                    Desarrollador Web Full Stack
                 </p>
-                <div className='flex flex-col sm:flex-row justify-center gap-3 sm:gap-4'>
-                    <a 
+                <p className='text-sm sm:text-lg leading-relaxed text-[var(--text-muted-color)] mb-8 max-w-2xl mx-auto'>
+                    Creo soluciones modernas y escalables que se adapten a las necesidades de los usuarios,
+                    utilizando un stack de tecnologías modernas y de vanguardia como
+                    <strong> React.js</strong>, <strong> Next.js</strong>, <strong> Tailwind CSS</strong>,
+                    <strong> PostgreSQL</strong> y <strong> Prisma</strong>.
+                    <br /><br />
+                    Además, cuento con experiencia en integración e implementación de sistemas ERP con
+                    <strong> Odoo</strong>, y busco mejorar continuamente mis habilidades para entregar
+                    soluciones de alto impacto.
+                </p>
+
+                <div className='flex flex-col sm:flex-row justify-center gap-4'>
+                    <a
                         href="#projects"
-                        className='px-6 py-3 bg-[var(--color-info)] text-white rounded-lg shadow-md hover:bg-[var(--color-info)]/80 transition-all duration-300'
+                        className='px-6 py-3 bg-[var(--color-info)] text-white rounded-lg shadow-lg hover:bg-[var(--color-info)]/90 transition-all duration-300'
                     >
                         Ver proyectos
                     </a>
-                    <a 
+                    <a
                         href="#contact"
-                        className='px-6 py-3 border border-[var(--color-info)] text-[var(--color-info)] rounded-lg shadow-md hover:bg-[var(--color-info)]/10 transition-all duration-300'
+                        className='px-6 py-3 border border-[var(--color-info)] text-[var(--color-info)] rounded-lg shadow-lg hover:bg-[var(--color-info)]/10 transition-all duration-300'
                     >
                         Contactar
                     </a>
 
-                    <DownloadButton 
+                    <DownloadButton
                         href='/Resume.pdf'
                         fileName='Resume.pdf'
                     />

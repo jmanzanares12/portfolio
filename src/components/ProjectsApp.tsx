@@ -3,14 +3,23 @@ import ProjectCard from '../shared/ProjectCard';
 
 const ProjectsApp = () => { 
     return (
-        <section className='min-h-screen py-6 px-3 md:px-12 lg:px-12 bg-[var(--bg-color)] text-[var(--text-color)]'>
-            <h2 className='text-center text-3xl font-bold mb-4'>Mis proyectos</h2>
-            <p className='text-center text-lg text-[var(--text-muted-color)] mb-12'>Laboratorios y prácticas que he desarrollado con tecnologias modernas y empleando buenas prácticas de desarrollo.</p>
+        <section className='py-16 bg-gradient-to-b from-[var(--bg-soft-color)] to-[var(--bg-color)] border border-[var(--border-color)] rounded-lg shadow-md mx-4 sm:mx-6 lg:mx-8 my-8'>
+            <div className='site-container'>
+                <header className='max-w-2xl mx-auto text-center mb-10'>
+                    <h2 className='text-3xl sm:text-4xl font-bold tracking-tight'>
+                        Proyectos destacados
+                    </h2>
+                    <p className='text-[var(--text-muted-color)] mt-4 leading-relaxed'>
+                        Sección donde veras mis primeros pasos hasta mis ultimos despliegues, 
+                        siempre tratando de aplicar buenas prácticas y nuevas tecnologías.
+                    </p>
+                </header>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 '>
-                {projectsLinks.map((project, index) => (
-                    <ProjectCard key={index} {...project} reverse={index % 2 !==0}/>
-                ))}
+                <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-0'>
+                    {projectsLinks.map((project, index) => (
+                        <ProjectCard key={index} {...project} reverse={index % 2 !== 0} />
+                    ))}
+                </div>
             </div>
         </section>
     )    

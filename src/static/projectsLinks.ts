@@ -1,3 +1,4 @@
+import Logicsa from '../assets/logicsa.avif';
 import PokedexImg from '../assets/Pokedex.avif';
 import HoroscopeImg from '../assets/HoroscopeApp.avif';
 import RockPaperScissorImg from '../assets/RockPaperScissor.avif';
@@ -7,6 +8,13 @@ import FlowersImg from '../assets/Flowers.avif';
 
 
 export const projectsLinks = [
+    {
+        name: 'Logicsa',
+        link: 'https://www.logicsa.net/',
+        description: 'Rediseño de pagina web de la empresa Logicsa, dedicada a almacenamiento y gestion de documentos fisicos y digitales.',
+        image: Logicsa,
+        tags: ['html', 'javascript', 'css', 'bootstrap', 'php']
+    },
     {
         name: 'Pokedex',
         link: 'https://pokedex-jade-psi.vercel.app/',
