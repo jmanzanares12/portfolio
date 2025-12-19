@@ -14,8 +14,8 @@ const ProjectCard = ({ name, link, description, image, tags, reverse }: ProjectC
         <div
             className={`
             group flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} bg-[var(--bg-card-color)]
-            border border-[var(--border-color)] rounded-xl overflow-hidden transition-all duration-300
-            hover:shadow-xl hover:-translate-y-1`}
+            border border-[var(--border-color)] rounded-xl overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1
+            ring-1 ring-[var(--primary-color)]/50`}
         >
             <div className="relative w-full md:w-1/2 h-56 md:h-44 overflow-hidden">
                 <img src={image} alt={name} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -42,8 +42,8 @@ const ProjectCard = ({ name, link, description, image, tags, reverse }: ProjectC
                                 <span
                                     key={index}
                                     className="text-xs px-3 py-1 rounded-full
-                         bg-[var(--bg-badge)]
-                         text-[var(--text-muted-color)]"
+                                    bg-[var(--bg-badge)]
+                                    text-[var(--text-muted-color)]"
                                 >
                                     {tag}
                                 </span>

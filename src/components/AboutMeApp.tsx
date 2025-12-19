@@ -3,7 +3,7 @@ import DownloadButton from '../shared/DownloadButtton';
 
 const AboutMeApp = () => {
     return (
-        <section className='max-w-7xl bg-gradient-to-b from-[var(--bg-color)] to-[var(--bg-soft-color)] py-16 sm:py-24 border border-[var(--border-color)] rounded-lg shadow-md mx-4 sm:mx-6 lg:mx-auto my-8'>
+        <section className='max-w-7xl bg-gradient-to-b from-[var(--bg-color)] to-[var(--bg-soft-color)] py-16 sm:py-24 border border-[var(--border-color)] rounded-lg shadow-md mx-4 sm:mx-6 lg:mx-auto my-8 ring-1 ring-[var(--primary-color)]/20'>
             <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
                 <img
                     src={photo}

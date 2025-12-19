@@ -3,7 +3,7 @@ import ProjectCard from '../shared/ProjectCard';
 
 const ProjectsApp = () => { 
     return (
-        <section className='py-16 bg-gradient-to-b from-[var(--bg-soft-color)] to-[var(--bg-color)] border border-[var(--border-color)] rounded-lg shadow-md mx-4 sm:mx-6 lg:mx-8 my-8'>
+        <section className='max-w-7xl sm:py-2 mx-4 sm:mx-6 lg:mx-auto my-8'>
             <div className='site-container'>
                 <header className='max-w-2xl mx-auto text-center mb-10'>
                     <h2 className='text-3xl sm:text-4xl font-bold tracking-tight'>
