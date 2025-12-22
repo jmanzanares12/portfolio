@@ -11,6 +11,7 @@ html{
     --bg-footer-color: #2927b9;
     --bg-soft-color: #f9f9fb;
     --bg-card-color: #fbfbfb;
+    --bg-contact-card-color: #fcfcfc;
     --bg-hover-color: #f5f5f7;
     --border-color: #e6e6e9;
     --text-color: #0f172a;
@@ -29,6 +30,7 @@ html{
     --bg-footer-color: #161541;
     --bg-soft-color: #121b2c;
     --bg-card-color: #071022;
+    --bg-contact-card-color: #0a1630;
     --bg-hover-color: #0a1630;
     --border-color: #142132;
     --text-color: #e6eef8;

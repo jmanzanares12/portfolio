@@ -13,86 +13,86 @@ const ContactForm = () => {
             resolver: yupResolver(contactSchema),
         })
 
-        const onSubmit = async (data: ContactFormInputs) => {
-            try {
-                const response = await fetch(FORMSPREE_API, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Accept: 'application/json'
-                    },
-                    body: JSON.stringify(data),
-                });
+    const onSubmit = async (data: ContactFormInputs) => {
+        try {
+            const response = await fetch(FORMSPREE_API, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json'
+                },
+                body: JSON.stringify(data),
+            });
 
-                if (response.ok) {
-                    console.log('Datos enviados correctamente');
-                    reset();
-                } else {
-                    console.error('Error al enviar el mail', await response.json());
-                }
-            } catch (error) {
-                console.log('Error al enviar el mail');
+            if (response.ok) {
+                console.log('Datos enviados correctamente');
+                reset();
+            } else {
+                console.error('Error al enviar el mail', await response.json());
             }
+        } catch (error) {
+            console.log('Error al enviar el mail');
         }
-    
+    }
 
-        return (
-            <form
-                onSubmit={handleSubmit(onSubmit)}
-                className='max-w-xl w-full mx-auto bg-[var(--bg-card-color)] border border-[var(--border-color)] p-6 space-y-6 mt-10 sm:mt-12 rounded-2xl'
-            >
-                <div>
-                    <label className='block text-sm font-medium text-[var(--muted-text-color)] mb-2'>Nombre *</label>
+
+    return (
+        <form
+            onSubmit={handleSubmit(onSubmit)}
+            className='w-full bg-[var(--bg-contact-card-color)] border border-[var(--border-color)] p-8 space-y-5 rounded-2xl shadow-sm'
+        >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="space-y-2">
+                    <label className='text-xs font-bold uppercase tracking-widest text-[var(--text-muted-color)] ml-1'>Nombre</label>
                     <input
                         {...register('username')}
-                        placeholder='Nombre completo'
-                        className='w-full px-4 py-2 text-sm sm:text-base rounded-lg border border-[var(--primary-color)] text-[var(--text-color)] focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                        placeholder='John Doe'
+                        className='w-full px-4 py-3 bg-[var(--bg-color)] rounded-xl border border-[var(--border-color)] text-[var(--text-color)] focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] outline-none transition-all placeholder:opacity-30'
                     />
-                    {errors.username && (
-                        <p className='text-red-500 text-xs font-medium mt-1'>{errors.username.message}</p>
-                    )}
+                    {errors.username && <p className='text-red-500 text-[10px] font-bold uppercase ml-1'>{errors.username.message}</p>}
                 </div>
 
-                <div>
-                    <label className='block text-sm font-medium text-[var(--muted-text-color)] mb-2'>Correo electrónico *</label>
+                <div className="space-y-2">
+                    <label className='text-xs font-bold uppercase tracking-widest text-[var(--text-muted-color)] ml-1'>Email</label>
                     <input
                         type='email'
                         {...register('email')}
-                        placeholder='tu@example.com'
-                        className='w-full px-4 py-2 text-sm sm:text-base rounded-lg border border-[var(--primary-color)] text-[var(--text-color)] focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                        placeholder='tu@email.com'
+                        className='w-full px-4 py-3 bg-[var(--bg-color)] rounded-xl border border-[var(--border-color)] text-[var(--text-color)] focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] outline-none transition-all placeholder:opacity-30'
                     />
-                    {errors && (
-                        <p className='text-red-500 text-xs font-medium mt-1'>{errors.email?.message}</p>
-                    )}
+                    {errors.email && <p className='text-red-500 text-[10px] font-bold uppercase ml-1'>{errors.email?.message}</p>}
                 </div>
-                <div>
-                    <label className='block text-sm font-medium text-[var(--muted-text-color)] mb-2'>Mensaje *</label>
-                    <textarea
-                        {...register('message')}
-                        placeholder='Escribe tu mensaje...'
-                        className='w-full px-4 py-2 text-sm sm:text-base rounded-lg border border-[var(--primary-color)] text-[var(--text-color)] focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none'
-                    />
-                    {errors.message && (
-                        <p className='text-red-500 text-xs font-medium mt-1'>{errors.message.message}</p>
-                    )}
+            </div>
+
+            <div className="space-y-2">
+                <label className='text-xs font-bold uppercase tracking-widest text-[var(--text-muted-color)] ml-1'>Mensaje</label>
+                <textarea
+                    {...register('message')}
+                    rows={4}
+                    placeholder='¿En qué puedo ayudarte?'
+                    className='w-full px-4 py-3 bg-[var(--bg-color)] rounded-xl border border-[var(--border-color)] text-[var(--text-color)] focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] outline-none transition-all resize-none placeholder:opacity-30'
+                />
+                {errors.message && <p className='text-red-500 text-[10px] font-bold uppercase ml-1'>{errors.message.message}</p>}
+            </div>
+
+            <button
+                type='submit'
+                disabled={isSubmitting}
+                className='w-full py-4 rounded-xl font-bold uppercase tracking-[0.2em] text-xs transition-all 
+                bg-[var(--primary-color)] text-white hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[var(--primary-color)]/20'
+            >
+                {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+            </button>
+
+            {isSubmitSuccessful && (
+                <div className="mt-4 p-4 bg-green-500/10 border border-green-500/20 rounded-xl">
+                    <p className='text-green-400 text-center text-xs font-bold uppercase tracking-wider'>
+                        ¡Recibido con éxito! Te responderé pronto.
+                    </p>
                 </div>
-
-                <div className='flex justify-end gap-4'>
-                    <button
-                        type='submit'
-                        disabled={isSubmitting}
-                        className='px-4 py-2 rounded border border-[var(--border-color)] text-white bg-[var(--color-info)] hover:bg-[var(--color-info)]/80 transition-all disable:opacity-50 '
-                    >
-                        {isSubmitting ? 'Enviando...' : 'Enviar'}
-                    </button>
-                </div>
-
-
-                {isSubmitSuccessful && (
-                    <p className='text-green-400 text-center text-sm font-medium mt-2'>Gracias por contactarme! Te respondere lo antes posible 🙌</p>
-                )}
-            </form>
-        )
+            )}
+        </form>
+    );
 }
 
 export default ContactForm;
