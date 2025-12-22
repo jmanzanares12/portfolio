@@ -4,8 +4,6 @@ import HoroscopeImg from '../assets/HoroscopeApp.avif';
 import RockPaperScissorImg from '../assets/RockPaperScissor.avif';
 import PasteleriaImg from '../assets/PastrieShop.avif';
 import RiveraBIImg from '../assets/RiveraBI.avif';
-import FlowersImg from '../assets/Flowers.avif';
-
 
 export const projectsLinks = [
     {
@@ -49,12 +47,5 @@ export const projectsLinks = [
         description: 'Implementacion y desarrollo de pagina web para la empresa RiveraBI utilizando el ERP Odoo.',
         image: RiveraBIImg,
         tags: ['Odoo']
-    },
-    {
-        name: 'Flowers',
-        link: 'https://jmanzanares12.github.io/yellow-flowers/',
-        description: 'Practica en react para la creacion de una animacion de flores amarillas utilizando canvas.',
-        image: FlowersImg,
-        tags: ['React', 'Canvas', 'Tailwind CSS']
     }
 ]  
