@@ -1,8 +1,8 @@
 import Logicsa from '../assets/logicsa.avif';
-import PokedexImg from '../assets/Pokedex.avif';
-import HoroscopeImg from '../assets/HoroscopeApp.avif';
+import PokedexImg from '../assets/pokedex.avif';
+import HoroscopeImg from '../assets/horoscope.avif';
 import RockPaperScissorImg from '../assets/RockPaperScissor.avif';
-import PasteleriaImg from '../assets/PastrieShop.avif';
+import PasteleriaImg from '../assets/bakery.avif';
 import RiveraBIImg from '../assets/RiveraBI.avif';
 
 export const projectsLinks = [
