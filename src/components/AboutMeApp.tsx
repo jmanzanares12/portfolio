@@ -44,7 +44,7 @@ const AboutMeApp = () => {
                     </a>
 
                     <DownloadButton
-                        href='/Resume.pdf'
+                        href='/Jorge-Resume-2025.pdf'
                         fileName='Resume.pdf'
                     />
                 </div>
