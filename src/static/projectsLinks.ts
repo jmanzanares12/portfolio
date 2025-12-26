@@ -3,7 +3,7 @@ import pokedex from '../assets/pokedex.avif'
 import horoscope from '../assets/horoscope.avif';
 import rock_paper_scissor from '../assets/rps.avif';
 import pasteleria from '../assets/bakery.avif';
-import riverabi from '../assets/riverabi.avif';
+import riverabi from '../assets/RiveraBI.avif';
 
 export const projectsLinks = [
     {
