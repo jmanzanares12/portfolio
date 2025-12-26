@@ -1,9 +1,9 @@
 import Logicsa from '../assets/logicsa.avif';
-import PokedexImg from '../assets/pokedex.avif';
-import HoroscopeImg from '../assets/horoscope.avif';
-import RockPaperScissorImg from '../assets/RockPaperScissor.avif';
-import PasteleriaImg from '../assets/bakery.avif';
-import RiveraBIImg from '../assets/RiveraBI.avif';
+import Pokedex from '../assets/pokedex.avif'
+import Horoscope from '../assets/horoscope.avif';
+import RockPaperScissor from '../assets/RockPaperScissor.avif';
+import Pasteleria from '../assets/bakery.avif';
+import RiveraBI from '../assets/RiveraBI.avif';
 
 export const projectsLinks = [
     {
@@ -17,35 +17,35 @@ export const projectsLinks = [
         name: 'Pokedex',
         link: 'https://pokedex-jade-psi.vercel.app/',
         description: 'Poyecto final de curso de introduccion al desarrollo web con React.',
-        image: PokedexImg,
+        image: Pokedex,
         tags: ['React', 'PokeAPI', 'Tailwind CSS', 'Vercel']
     },
     {
         name: 'Horoscope',
         link: 'https://jmanzanares12.github.io/horoscope-app/',
         description: 'Proyecto de laboratorio para el curso de desarrollo web con React.',
-        image: HoroscopeImg,
+        image: Horoscope,
         tags: ['React', 'Tailwind CSS']
     },
     {
         name: 'Rock Paper Scissors',
         link: 'https://jmanzanares12.github.io/rock-paper-scissor/',
         description: 'Proyecto de laboratorio para el curso de desarrollo web con React.',
-        image: RockPaperScissorImg,
+        image: RockPaperScissor,
         tags: ['React']
     },
     {
         name: 'Pasteleria Lilliam',
         link: 'https://pasteleria-l.vercel.app/',
         description: 'Proyecto personal para la creación de una pagina web dedicada a la pastelería Lilliam.',
-        image: PasteleriaImg,
-        tags: ['React', 'Tailwind CSS']
+        image: Pasteleria,
+        tags: ['React', 'Tailwind CSS', 'JavaScript']
     },
     {
         name: 'RiveraBI',
-        link: 'https://riverabi.com/',
-        description: 'Implementacion y desarrollo de pagina web para la empresa RiveraBI utilizando el ERP Odoo.',
-        image: RiveraBIImg,
-        tags: ['Odoo']
+        link: '',
+        description: 'En desarrollo',
+        image: RiveraBI,
+        tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'PostgreSQL', 'Prisma']
     }
 ]  
