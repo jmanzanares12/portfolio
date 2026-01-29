@@ -25,7 +25,7 @@ const AboutMeApp = () => {
                     <strong> PostgreSQL</strong> y <strong> Prisma</strong>.
                     <br /><br />
                     Además, cuento con experiencia en integración e implementación de sistemas ERP con
-                    <strong> Odoo</strong>, y busco mejorar continuamente mis habilidades para entregar
+                    <strong> Odoo</strong> y <strong> ERPNext</strong>, busco mejorar continuamente mis habilidades para entregar
                     soluciones de alto impacto.
                 </p>
 
@@ -44,7 +44,7 @@ const AboutMeApp = () => {
                     </a>
 
                     <DownloadButton
-                        href='/Jorge-Resume-2025.pdf'
+                        href='/Resume 2026.pdf'
                         fileName='Resume.pdf'
                     />
                 </div>
