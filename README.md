@@ -1,20 +1,29 @@
 # Portfolio
 
-This page is a portfolio of my work, which includes:
+Bienvenido a mi portafolio personal
+Este proyecto reúne mi experiencia, proyectos y formas de contacto en un solo lugar.
 
-- My resume
-- My repositories
-- My contact information
+**[Ver portafolio](https://portfolio-six-rosy-49.vercel.app/)**
 
-## My resume
+---
 
-[My resume] is available on my [Porftolio] page.
+## Sobre el proyecto
 
-## My repositories
+Este portafolio fue desarrollado con el objetivo de mostrar mis habilidades como desarrollador, mi trayectoria profesional y algunos de los proyectos en los que he trabajado.
 
-[My repositories] are available on my [GitHub profile].
+Incluye:
+- Currículum
+- Proyectos y repositorios
+- Información de contacto
 
-## My contact information
+---
 
-[My contact information] is available on my [Porftolio] page.
+## Tecnologías utilizadas
 
+El proyecto fue construido utilizando tecnologías modernas del ecosistema frontend:
+
+- **TypeScript** – Tipado estático y mejor mantenibilidad
+- **JavaScript** – Lógica de la aplicación
+- **HTML** – Estructura del sitio
+- **CSS** – Estilos y diseño responsivo
+- **Vite** – Entorno de desarrollo rápido y moderno
