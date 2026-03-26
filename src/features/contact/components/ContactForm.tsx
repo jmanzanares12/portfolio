@@ -25,69 +25,100 @@ const ContactForm = () => {
             });
 
             if (response.ok) {
-                console.log('Datos enviados correctamente');
                 reset();
-            } else {
-                console.error('Error al enviar el mail', await response.json());
             }
         } catch (error) {
-            console.log('Error al enviar el mail');
+            console.error('Error al enviar el mail');
         }
     }
-
 
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className='w-full bg-[var(--bg-contact-card-color)] border border-[var(--border-color)] p-8 space-y-5 rounded-2xl shadow-sm'
+            className="w-full bg-card border border-border-custom p-8 md:p-10 space-y-6 rounded-[2rem] shadow-xl shadow-black/5 relative overflow-hidden"
         >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="space-y-2">
-                    <label className='text-xs font-bold uppercase tracking-widest text-[var(--text-muted-color)] ml-1'>Nombre</label>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Campo: Nombre */}
+                <div className="space-y-2 text-left">
+                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted ml-1">
+                        Nombre Completo
+                    </label>
                     <input
                         {...register('username')}
-                        placeholder='John Doe'
-                        className='w-full px-4 py-3 bg-[var(--bg-color)] rounded-xl border border-[var(--border-color)] text-[var(--text-color)] focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] outline-none transition-all placeholder:opacity-30'
+                        placeholder="Jorge Gaitán"
+                        className="w-full px-5 py-4 bg-background rounded-2xl border border-border-custom text-main-text 
+                                 placeholder:text-muted/30 focus:border-primary/50 focus:ring-4 focus:ring-primary/5 
+                                 outline-none transition-all duration-300 font-medium"
                     />
-                    {errors.username && <p className='text-red-500 text-[10px] font-bold uppercase ml-1'>{errors.username.message}</p>}
+                    {errors.username && (
+                        <p className="text-[9px] font-bold uppercase tracking-widest text-red-500 mt-1 ml-1">
+                            {errors.username.message}
+                        </p>
+                    )}
                 </div>
 
-                <div className="space-y-2">
-                    <label className='text-xs font-bold uppercase tracking-widest text-[var(--text-muted-color)] ml-1'>Email</label>
+                {/* Campo: Email */}
+                <div className="space-y-2 text-left">
+                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted ml-1">
+                        Tu Email
+                    </label>
                     <input
-                        type='email'
+                        type="email"
                         {...register('email')}
-                        placeholder='tu@email.com'
-                        className='w-full px-4 py-3 bg-[var(--bg-color)] rounded-xl border border-[var(--border-color)] text-[var(--text-color)] focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] outline-none transition-all placeholder:opacity-30'
+                        placeholder="tu@email.com"
+                        className="w-full px-5 py-4 bg-background rounded-2xl border border-border-custom text-main-text 
+                                 placeholder:text-muted/30 focus:border-primary/50 focus:ring-4 focus:ring-primary/5 
+                                 outline-none transition-all duration-300 font-medium"
                     />
-                    {errors.email && <p className='text-red-500 text-[10px] font-bold uppercase ml-1'>{errors.email?.message}</p>}
+                    {errors.email && (
+                        <p className="text-[9px] font-bold uppercase tracking-widest text-red-500 mt-1 ml-1">
+                            {errors.email?.message}
+                        </p>
+                    )}
                 </div>
             </div>
 
-            <div className="space-y-2">
-                <label className='text-xs font-bold uppercase tracking-widest text-[var(--text-muted-color)] ml-1'>Mensaje</label>
+            {/* Campo: Mensaje */}
+            <div className="space-y-2 text-left">
+                <label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted ml-1">
+                    Mensaje
+                </label>
                 <textarea
                     {...register('message')}
-                    rows={4}
-                    placeholder='¿En qué puedo ayudarte?'
-                    className='w-full px-4 py-3 bg-[var(--bg-color)] rounded-xl border border-[var(--border-color)] text-[var(--text-color)] focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] outline-none transition-all resize-none placeholder:opacity-30'
+                    rows={5}
+                    placeholder="Cuéntame sobre tu proyecto o idea..."
+                    className="w-full px-5 py-4 bg-background rounded-2xl border border-border-custom text-main-text 
+                             placeholder:text-muted/30 focus:border-primary/50 focus:ring-4 focus:ring-primary/5 
+                             outline-none transition-all duration-300 resize-none font-medium"
                 />
-                {errors.message && <p className='text-red-500 text-[10px] font-bold uppercase ml-1'>{errors.message.message}</p>}
+                {errors.message && (
+                    <p className="text-[9px] font-bold uppercase tracking-widest text-red-500 mt-1 ml-1">
+                        {errors.message.message}
+                    </p>
+                )}
             </div>
 
+            {/* Botón de envío dinámico */}
             <button
-                type='submit'
+                type="submit"
                 disabled={isSubmitting}
-                className='w-full py-4 rounded-xl font-bold uppercase tracking-[0.2em] text-xs transition-all 
-                bg-[var(--primary-color)] text-white hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-[var(--primary-color)]/20'
+                className="group relative w-full py-5 rounded-2xl font-black uppercase tracking-[0.3em] text-[10px] 
+                         transition-all duration-500 overflow-hidden
+                         bg-main-text text-background dark:bg-white dark:text-navy-950
+                         hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed shadow-2xl shadow-primary/10"
             >
-                {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+                <span className="relative z-10">
+                    {isSubmitting ? 'Procesando...' : 'Enviar Propuesta'}
+                </span>
+                {/* Efecto de brillo al hacer hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             </button>
 
+            {/* Feedback Success */}
             {isSubmitSuccessful && (
-                <div className="mt-4 p-4 bg-green-500/10 border border-green-500/20 rounded-xl">
-                    <p className='text-green-400 text-center text-xs font-bold uppercase tracking-wider'>
-                        ¡Recibido con éxito! Te responderé pronto.
+                <div className="mt-4 p-4 bg-green-500/5 border border-green-500/20 rounded-2xl animate-in fade-in zoom-in duration-500">
+                    <p className="text-green-500 text-center text-[10px] font-black uppercase tracking-[0.2em]">
+                        ✓ Mensaje enviado. ¡Hablemos pronto!
                     </p>
                 </div>
             )}

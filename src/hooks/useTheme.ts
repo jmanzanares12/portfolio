@@ -17,7 +17,7 @@ export const useTheme = () => {
         root.classList.add(theme);
         localStorage.setItem('theme', theme);
     }, [theme]);
-
+ 
     const changeTheme = () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
 
     return { theme, changeTheme };

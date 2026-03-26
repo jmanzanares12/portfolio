@@ -1,74 +1,77 @@
+import { memo } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-interface ProjectCardProps {
-    name?: string;
-    link?: string;
-    description?: string;
-    image?: string;
-    tags?: string[];
-}
+type ProjectCardProps = {
+  name: string;
+  description: string;
+  image: string;
+  link?: string;
+  tags?: readonly string[];
+};
 
+function ProjectCardBase({ name, link, description, image, tags }: ProjectCardProps) {
+  return (
+    <article
+      className="group flex flex-col bg-card border border-border-custom
+      rounded-[1.5rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2"
+    >
+      {/* Contenedor de Imagen */}
+      <div className="relative aspect-[16/10] overflow-hidden bg-background">
+        <img
+          src={image}
+          alt={name}
+          loading="lazy"
+          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+        />
+        {/* Gradiente más suave para que la imagen no se corte bruscamente */}
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-60" />
+      </div>
 
-const ProjectCard = ({ name, link, description, image, tags }: ProjectCardProps) => {
-    return (
-        <div 
-            className="group flex flex-col bg-[var(--bg-card-color)] border border-[var(--border-color)] rounded-2xl overflow-hidden transition-all hover:shadow-2xl hover:shadow-[var(--primary-color)]/5 hover:-translate-y-1
-            ring-1 ring-[var(--primary-color)]/20"
-        >
-            
-            {/* Contenedor de Imagen: Ahora arriba y con relación de aspecto fija */}
-            <div className="relative aspect-video overflow-hidden">
-                <img
-                    src={image}
-                    alt={name}
-                    loading="lazy"
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                />
-                {/* Overlay sutil para dar profundidad */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card-color)]/20 to-transparent" />
+      <div className="flex flex-col flex-grow p-6 md:p-8 relative z-10">
+        <div className="flex-grow">
+          <h3 className="text-xl font-bold tracking-tight text-main-text mb-3 group-hover:text-primary transition-colors">
+            {name}
+          </h3>
+
+          <p className="text-sm leading-relaxed text-muted mb-6 line-clamp-3">
+            {description}
+          </p>
+
+          {/* Tags estilo píldora, sin bordes duros */}
+          {tags?.length ? (
+            <div className="flex flex-wrap gap-2 mb-6">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full
+                  bg-primary/10 text-primary"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
-
-            {/* Contenido: Flujo vertical natural */}
-            <div className="flex flex-col flex-grow p-5 md:p-6">
-                <div className="flex-grow">
-                    <h3 className="text-lg font-bold tracking-tight text-[var(--text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors">
-                        {name}
-                    </h3>
-
-                    <p className="text-sm leading-relaxed text-[var(--text-muted-color)] mb-6 line-clamp-3">
-                        {description}
-                    </p>
-
-                    {/* Tags: Estilo minimalista y uniforme */}
-                    <div className="flex flex-wrap gap-1.5 mb-6">
-                        {tags && tags.map((tag, index) => (
-                            <span
-                                key={index}
-                                className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded border border-[var(--border-color)] text-[var(--text-muted-color)] bg-[var(--border-color)]/5"
-                            >
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Acción: Botón minimalista al pie */}
-                <div className="pt-4 border-t border-[var(--primary-color)]/20">
-                    {link && (
-                        <a
-                            href={link}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--text-color)] hover:text-[var(--primary-color)] transition-all group/link"
-                        >
-                            Ver Proyecto
-                            <FaExternalLinkAlt className="w-3 h-3 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
-                        </a>
-                    )}
-                </div>
-            </div>
+          ) : null}
         </div>
-    );
+
+        {/* Footer del card: Sin línea separadora, usando 'mt-auto' para empujar al fondo */}
+        <div className="pt-2 mt-auto">
+          {link ? (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-main-text
+              hover:text-primary transition-all group/link"
+              aria-label={`Abrir proyecto: ${name}`}
+            >
+              Ver Proyecto
+              <FaExternalLinkAlt className="w-3 h-3 transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+            </a>
+          ) : null}
+        </div>
+      </div>
+    </article>
+  );
 }
 
-export default ProjectCard;
+export default memo(ProjectCardBase);

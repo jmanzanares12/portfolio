@@ -1,7 +1,24 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-html{
-    scroll-behavior: smooth;
+@theme {
+  /* Mapeo de Tailwind variables CSS */
+  --color-background: var(--bg-color);
+  --color-card: var(--bg-card-color);
+  --color-border-custom: var(--border-color);
+  --color-primary: var(--primary-color);
+  --color-accent: var(--color-accent);
+  --color-muted: var(--text-muted-color);
+  --color-main-text: var(--text-color);
+
+  /* Sombras */
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  --shadow-card-dark: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-main-text transition-colors duration-300;
+  }
 }
 
 /* Valores por defecto */

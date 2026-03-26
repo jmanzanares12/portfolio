@@ -7,6 +7,20 @@ import riverabi from '../assets/RiveraBI.avif';
 
 export const projectsLinks = [
     {
+        name: 'RiveraBI',
+        link: '',
+        description: 'Actualmente en desarrollo',
+        image: riverabi,
+        tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'PostgreSQL', 'Prisma']
+    },
+    {
+        name: 'Pasteleria Lilliam',
+        link: 'https://pasteleria-l.vercel.app/',
+        description: 'Landing Page dedicada a pasteleria familiar: "Pasteleria Lilliam".',
+        image: pasteleria,
+        tags: ['React', 'Tailwind CSS', 'JavaScript']
+    },
+    {
         name: 'Logicsa',
         link: 'https://www.logicsa.net/',
         description: 'Rediseño de pagina web de la empresa Logicsa, dedicada a almacenamiento y gestion de documentos fisicos y digitales.',
@@ -33,19 +47,5 @@ export const projectsLinks = [
         description: 'Proyecto de laboratorio para el curso de desarrollo web con React.',
         image: rock_paper_scissor,
         tags: ['React']
-    },
-    {
-        name: 'Pasteleria Lilliam',
-        link: 'https://pasteleria-l.vercel.app/',
-        description: 'Proyecto personal para la creación de una pagina web dedicada a la pastelería Lilliam.',
-        image: pasteleria,
-        tags: ['React', 'Tailwind CSS', 'JavaScript']
-    },
-    {
-        name: 'RiveraBI',
-        link: '',
-        description: 'En desarrollo',
-        image: riverabi,
-        tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'PostgreSQL', 'Prisma']
     }
 ]  
