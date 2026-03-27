@@ -23,8 +23,6 @@ function ProjectCardBase({ name, link, description, image, tags }: ProjectCardPr
           loading="lazy"
           className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
         />
-        {/* Gradiente más suave para que la imagen no se corte bruscamente */}
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-60" />
       </div>
 
       <div className="flex flex-col flex-grow p-6 md:p-8 relative z-10">

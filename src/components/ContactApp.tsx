@@ -56,7 +56,6 @@ const ContactApp = () => {
 
                 {/* Columna Derecha: El Formulario */}
                 <div className="relative group">
-                    {/* Un borde degradado sutil para el contenedor del formulario */}
                     <div className="absolute -inset-1 bg-gradient-to-tr from-primary/20 to-transparent rounded-[2rem] blur-sm opacity-50" />
                     <div className="relative">
                         <ContactForm />

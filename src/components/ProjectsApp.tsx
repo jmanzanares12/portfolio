@@ -4,11 +4,10 @@ import ProjectCard from "../shared/ProjectCard";
 const ProjectsApp = () => {
   return (
     <section
-      id="projects" // Asegúrate de tener el ID para el scroll suave
+      id="projects"
       className="relative py-24 px-6 overflow-hidden"
       aria-labelledby="projects-title"
     >
-      {/* Sutil resplandor lateral para dar profundidad al grid */}
       <div className="absolute top-1/4 -right-24 w-96 h-96 bg-primary/5 blur-[100px] pointer-events-none rounded-full" />
       <div className="absolute bottom-1/4 -left-24 w-96 h-96 bg-accent/5 blur-[100px] pointer-events-none rounded-full" />
 
@@ -33,7 +32,6 @@ const ProjectsApp = () => {
           </p>
         </header>
 
-        {/* Grid ajustado con gap más amplio para que cada card respire */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projectsLinks.map((project) => (
             <div key={project.link ?? project.name} className="flex h-full">

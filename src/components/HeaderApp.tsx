@@ -9,7 +9,6 @@ const HeaderApp = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    // Efecto para que el header cambie al hacer scroll
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener("scroll", handleScroll);
@@ -31,7 +30,6 @@ const HeaderApp = () => {
                 : "bg-background border-transparent py-4"}`}>
             
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-                {/* Logo / Brand */}
                 <div className="flex flex-col group cursor-default">
                     <h1 className="text-lg font-black tracking-tighter text-main-text group-hover:text-primary transition-colors">
                         JORGE GAITÁN
@@ -41,7 +39,6 @@ const HeaderApp = () => {
                     </span>
                 </div>
 
-                {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8">
                     <div className="flex items-center gap-2 border-r border-border-custom pr-6">
                         {socialLinks.map((link) => (
@@ -60,7 +57,6 @@ const HeaderApp = () => {
                     <ThemeButton />
                 </div>
 
-                {/* Mobile Toggle */}
                 <div className="flex items-center gap-4 md:hidden">
                     <ThemeButton />
                     <button onClick={toggleMenu} className="p-2 text-main-text">
@@ -69,7 +65,6 @@ const HeaderApp = () => {
                 </div>
             </div>
 
-            {/* Mobile Menu Dropdown */}
             {isOpen && (
                 <div className="absolute top-full left-0 w-full bg-background border-b border-border-custom p-6 flex flex-col gap-6 md:hidden animate-in slide-in-from-top-2">
                     {socialLinks.map((link) => (

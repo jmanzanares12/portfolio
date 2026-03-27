@@ -38,7 +38,6 @@ const ContactForm = () => {
             className="w-full bg-card border border-border-custom p-8 md:p-10 space-y-6 rounded-[2rem] shadow-xl shadow-black/5 relative overflow-hidden"
         >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Campo: Nombre */}
                 <div className="space-y-2 text-left">
                     <label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted ml-1">
                         Nombre Completo
@@ -57,7 +56,6 @@ const ContactForm = () => {
                     )}
                 </div>
 
-                {/* Campo: Email */}
                 <div className="space-y-2 text-left">
                     <label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted ml-1">
                         Tu Email
@@ -78,7 +76,6 @@ const ContactForm = () => {
                 </div>
             </div>
 
-            {/* Campo: Mensaje */}
             <div className="space-y-2 text-left">
                 <label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted ml-1">
                     Mensaje
@@ -98,23 +95,26 @@ const ContactForm = () => {
                 )}
             </div>
 
-            {/* Botón de envío dinámico */}
             <button
                 type="submit"
                 disabled={isSubmitting}
                 className="group relative w-full py-5 rounded-2xl font-black uppercase tracking-[0.3em] text-[10px] 
-                         transition-all duration-500 overflow-hidden
-                         bg-main-text text-background dark:bg-white dark:text-navy-950
-                         hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed shadow-2xl shadow-primary/10"
+               transition-all duration-500 overflow-hidden
+               bg-main-text text-background
+               hover:scale-[1.02] active:scale-95 
+               disabled:opacity-50 disabled:cursor-not-allowed 
+               shadow-2xl shadow-primary/10 border border-transparent hover:border-primary/20"
             >
                 <span className="relative z-10">
                     {isSubmitting ? 'Procesando...' : 'Enviar Propuesta'}
                 </span>
-                {/* Efecto de brillo al hacer hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+                {/* Efecto de brillo dinámico */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
+                    dark:via-white/10 -translate-x-full group-hover:translate-x-full 
+                    transition-transform duration-1000 ease-in-out" />
             </button>
 
-            {/* Feedback Success */}
             {isSubmitSuccessful && (
                 <div className="mt-4 p-4 bg-green-500/5 border border-green-500/20 rounded-2xl animate-in fade-in zoom-in duration-500">
                     <p className="text-green-500 text-center text-[10px] font-black uppercase tracking-[0.2em]">

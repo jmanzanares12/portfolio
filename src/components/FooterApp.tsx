@@ -20,7 +20,7 @@ const FooterApp = () => {
                         Jorge <span className="text-primary">Gaitán</span>
                     </h2>
                     <p className="text-[10px] font-bold uppercase tracking-widest text-muted">
-                        Software Developer & ERP Specialist
+                        Full Stack Developer
                     </p>
                 </div>
 
