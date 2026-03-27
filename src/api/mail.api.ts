@@ -1,1 +1,1 @@
-export const FORMSPREE_API = 'https://formspree.io/f/meozwrqo';
+export const FORMSPREE_API = 'https://formspree.io/f/xeepeako';

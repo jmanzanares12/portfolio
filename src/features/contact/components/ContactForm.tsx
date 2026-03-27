@@ -1,10 +1,13 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useState } from 'react';
 import { contactSchema } from '../validations/contact.schema';
 import { ContactFormInputs } from '../types/contact.types';
 import { FORMSPREE_API } from '../../../api/mail.api';
 
 const ContactForm = () => {
+    const [sendError, setSendError] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -14,20 +17,24 @@ const ContactForm = () => {
         })
 
     const onSubmit = async (data: ContactFormInputs) => {
+        setSendError(false);
         try {
             const response = await fetch(FORMSPREE_API, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    Accept: 'application/json'
+                    'Accept': 'application/json'
                 },
                 body: JSON.stringify(data),
             });
 
             if (response.ok) {
                 reset();
+            } else {
+                setSendError(true);
             }
         } catch (error) {
+            setSendError(true);
             console.error('Error al enviar el mail');
         }
     }
@@ -99,26 +106,33 @@ const ContactForm = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className="group relative w-full py-5 rounded-2xl font-black uppercase tracking-[0.3em] text-[10px] 
-               transition-all duration-500 overflow-hidden
-               bg-main-text text-background
-               hover:scale-[1.02] active:scale-95 
-               disabled:opacity-50 disabled:cursor-not-allowed 
-               shadow-2xl shadow-primary/10 border border-transparent hover:border-primary/20"
+                         transition-all duration-500 overflow-hidden
+                         bg-main-text text-background
+                         hover:scale-[1.02] active:scale-95 
+                         disabled:opacity-50 disabled:cursor-not-allowed 
+                         shadow-2xl shadow-primary/10 border border-transparent hover:border-primary/20"
             >
                 <span className="relative z-10">
                     {isSubmitting ? 'Procesando...' : 'Enviar Propuesta'}
                 </span>
 
-                {/* Efecto de brillo dinámico */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
-                    dark:via-white/10 -translate-x-full group-hover:translate-x-full 
-                    transition-transform duration-1000 ease-in-out" />
+                                dark:via-white/10 -translate-x-full group-hover:translate-x-full 
+                                transition-transform duration-1000 ease-in-out" />
             </button>
 
             {isSubmitSuccessful && (
                 <div className="mt-4 p-4 bg-green-500/5 border border-green-500/20 rounded-2xl animate-in fade-in zoom-in duration-500">
                     <p className="text-green-500 text-center text-[10px] font-black uppercase tracking-[0.2em]">
                         ✓ Mensaje enviado. ¡Hablemos pronto!
+                    </p>
+                </div>
+            )}
+
+            {sendError && (
+                <div className="mt-4 p-4 bg-red-500/5 border border-red-500/20 rounded-2xl animate-in fade-in zoom-in duration-500">
+                    <p className="text-red-500 text-center text-[10px] font-black uppercase tracking-[0.2em]">
+                        ✕ Error al enviar. Inténtalo de nuevo o escríbeme por LinkedIn.
                     </p>
                 </div>
             )}
