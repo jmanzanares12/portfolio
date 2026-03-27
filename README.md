@@ -3,7 +3,7 @@
 Bienvenido a mi portafolio personal
 Este proyecto reúne mi experiencia, proyectos y formas de contacto en un solo lugar.
 
-**[Ver portafolio](https://portfolio-six-rosy-49.vercel.app/)**
+**[Ver portafolio](https://portfolio-mu-one-82.vercel.app/)**
 
 ---
 
