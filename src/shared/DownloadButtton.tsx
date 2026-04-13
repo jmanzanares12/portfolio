@@ -1,5 +1,3 @@
-import { FaDownload } from "react-icons/fa";
-
 interface DownloadButtonProps {
     href?: string;
     fileName?: string;

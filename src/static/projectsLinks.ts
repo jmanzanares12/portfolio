@@ -4,6 +4,7 @@ import horoscope from '../assets/horoscope.avif';
 import rock_paper_scissor from '../assets/rps.avif';
 import pasteleria from '../assets/bakery.avif';
 import riverabi from '../assets/RiveraBI.avif';
+import paladino from '../assets/paladino.avif';
 
 export const projectsLinks = [
     {
@@ -14,11 +15,18 @@ export const projectsLinks = [
         tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'PostgreSQL', 'Prisma']
     },
     {
+        name: 'PaladinoDotBuild',
+        link:'https://paladino-bice.vercel.app/',
+        description:'Landing Page de empresa extrangera Colombiana PaladinoDotBuild que permite ofertar de mejor manera sus servicios profesionales.',
+        image: paladino,
+        tags: ['Astro', 'Tailwind CSS', 'JavaScript', 'Vercel']
+    },
+    {
         name: 'Pasteleria Lilliam',
         link: 'https://www.pastelerialilliam.com/',
         description: 'Landing Page dedicada a pasteleria familiar: "Pasteleria Lilliam".',
         image: pasteleria,
-        tags: ['React', 'Tailwind CSS', 'JavaScript']
+        tags: ['React', 'Tailwind CSS', 'JavaScript', 'Vercel']
     },
     {
         name: 'Logicsa',
