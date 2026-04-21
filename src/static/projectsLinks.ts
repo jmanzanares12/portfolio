@@ -15,9 +15,9 @@ export const projectsLinks = [
         tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'PostgreSQL', 'Prisma']
     },
     {
-        name: 'PaladinoDotBuild',
-        link:'https://paladino-bice.vercel.app/',
-        description:'Landing Page de empresa extrangera Colombiana PaladinoDotBuild que permite ofertar de mejor manera sus servicios profesionales.',
+        name: 'PaladinDotBuild',
+        link:'https://www.paladin.build/',
+        description:'Landing Page de empresa extrangera Colombiana PaladinDotBuild que permite ofertar de mejor manera sus servicios profesionales.',
         image: paladino,
         tags: ['Astro', 'Tailwind CSS', 'JavaScript', 'Vercel']
     },
